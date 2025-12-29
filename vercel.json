@@ -15,19 +15,5 @@
         }
       ]
     }
-  ],
-  "routes": [
-    {
-      "src": "/chat.html",
-      "dest": "/chat.html"
-    },
-    {
-      "src": "/Thank-sunatthx.html",
-      "dest": "/Thank-sunatthx.html"
-    },
-    {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|mp3|svg))",
-      "dest": "/$1"
-    }
   ]
 }
