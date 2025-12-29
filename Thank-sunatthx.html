@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สวัสดีปีใหม่</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="thank-style.css">
+</head>
+<body>
+
+  <div class="thank-you-page">
+    <h1 class="pop-text">ขอบคุณนะเค้าจะทำให้ดีที่สุด🫳</h1>
+    <p class="sub-text">เค้าไม่เคยหมดใจกับเรื่องของมายเลยย 💖</p>
+    <p class="year">🎊 HAPPY NEW YEAR 2026 🎊(แตะหน้าจอเพื่อเปิดเพลง)</p>
+  </div>
+
+  <div class="confetti-container">
+    <span class="confetti"></span>
+    <span class="confetti"></span>
+    <span class="confetti"></span>
+    <span class="confetti"></span>
+    <span class="confetti"></span>
+  </div>
+  <audio id="bg-music" loop>
+    <source src="ANATOMYRABBIT.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    document.body.addEventListener("click", () => {
+      const music = document.getElementById("bg-music");
+      music.play();
+    }, { once: true });
+    </script>
+
+  <canvas id="fireworks"></canvas>
+
+  <script src="firework.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+    font-family: 'Kodchasan', sans-serif;
+  
+    background-image: url("IMG_8774.png");
+    background-size: cover;        /* เต็มจอ */
+    background-position: center;   /* กลางภาพ */
+    background-repeat: no-repeat;  /* ไม่ซ้ำ */
+    background-attachment: fixed;  /* เลื่อนแล้วไม่ขยับ */
+  
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35); /* ปรับความเข้มได้ */
+    z-index: 0;
+  }
+  
+  
+  /* จัดกลางจอ */
+  .thank-you-page {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+  }
+  
+  /* ตัวหนังสือเน้น ๆ */
+  .pop-text {
+    color: #fff;
+    font-weight: 900;
+  
+    text-shadow:
+      0 0 5px #000,
+      0 0 10px #000,
+      0 0 20px #000,
+      0 0 40px #000;
+  }
+  
+  .sub-text {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.8s;
+    
+    text-shadow:
+    0 0 5px #000,
+    0 0 10px #000,
+    0 0 20px #000,
+    0 0 40px #000;
+}
+  
+  .year {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: #ffd700;
+    animation: blink 1.5s infinite;
+  }
+  
+  /* เอฟเฟกต์ตัวอักษร */
+  @keyframes pop {
+    0% { transform: scale(0.3); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes fadeUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  /* Confetti */
+  .confetti-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ffd700;
+    animation: fall 3s linear infinite;
+  }
+
+  #fireworks {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+  }
+  
+  
+  .confetti:nth-child(1) { left: 15%; animation-delay: 0s; }
+  .confetti:nth-child(2) { left: 35%; animation-delay: 1s; }
+  .confetti:nth-child(3) { left: 55%; animation-delay: 0.5s; }
+  .confetti:nth-child(4) { left: 75%; animation-delay: 1.5s; }
+  .confetti:nth-child(5) { left: 90%; animation-delay: 0.8s; }
+  
+  @keyframes fall {
+    from { top: -10%; transform: rotate(0deg); }
+    to { top: 110%; transform: rotate(360deg); }
+  }
+  

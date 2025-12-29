@@ -1,0 +1,33 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/chat.html",
+      "dest": "/chat.html"
+    },
+    {
+      "src": "/Thank-sunatthx.html",
+      "dest": "/Thank-sunatthx.html"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|mp3|svg))",
+      "dest": "/$1"
+    }
+  ]
+}
